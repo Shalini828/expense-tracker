@@ -1,0 +1,218 @@
+/* 🌌 BACKGROUND */
+.auth-container {
+  height: 100vh;
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at 20% 20%, #1e3a8a, transparent 40%),
+              radial-gradient(circle at 80% 80%, #0ea5e9, transparent 40%),
+              #020617;
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+}
+
+/* 🔥 GLOW AURA */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #3b82f6;
+  filter: blur(150px);
+  opacity: 0.3;
+  top: -100px;
+  left: -100px;
+}
+
+/* 💎 CARD */
+.auth-box {
+  width: 360px;
+  padding: 35px;
+  border-radius: 25px;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+  animation: fadeIn 0.8s ease forwards, float 6s ease-in-out infinite;
+  color: #e2e8f0;
+}
+.auth-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+/* 🔥 3D HOVER */
+.auth-box:hover {
+  transform: rotateX(5deg) rotateY(-5deg) scale(1.02);
+}
+
+/* 📝 TITLE */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #c7d2fe;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+/* ✏️ INPUTS */
+.auth-box input {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+
+  transition: 0.3s;
+}
+
+.auth-box input::placeholder {
+  color: #64748b;
+}
+
+.auth-box input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+/* 🔘 BUTTON */
+.auth-box button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* 🔻 FOOTER */
+.auth-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.auth-box span {
+  color: #3b82f6;
+  cursor: pointer;
+  font-weight: 500;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #94a3b8;
+}
+.login-text {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.login-text span {
+  color: #60a5fa;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.auth-box button:active {
+  transform: scale(0.97);
+}
+
+.eye-icon:hover {
+  color: #60a5fa;
+}
+
+.login-box {
+  width: 400px;
+  color: white;
+  text-align: center;
+}
+
+.login-box label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.forgot {
+  font-size: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.switch-text span {
+  color: #3b82f6;
+  cursor: pointer;
+}
