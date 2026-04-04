@@ -1,9 +1,18 @@
-.header {
-  width: 100%;
-  padding: 20px;
-  background-color: #0f172a;
+body {
+  margin: 0;
+  background: #020617;
   color: white;
-  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.navbarCSS {
+  padding: 15px 40px;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navTitle {
   font-size: 20px;
   font-weight: bold;
 }
